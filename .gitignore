@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+
+# MLflow
+mlruns/
+
+# Environment
+.env
+
+# Logs
+*.log
+
+# OS
+Thumbs.db
+
+# Database
+*.db
+*.sqlite
+
