@@ -16,5 +16,6 @@ jobs:
       - name: Push to HF Space
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true 
         run: |
           git push -f https://Rashmiprakash-56:$HF_TOKEN@huggingface.co/spaces/Rashmiprakash78/Chat_Agent main
