@@ -25,7 +25,8 @@ argon2-cffi==25.1.0
 # Database (PostgreSQL + SQLAlchemy)
 # =============================================
 SQLAlchemy==2.0.46
-psycopg[binary]==3.2.9
+psycopg2-binary
+psycopg2 
 greenlet==3.3.1
 
 # =============================================
