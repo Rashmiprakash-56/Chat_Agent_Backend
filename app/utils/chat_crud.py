@@ -68,7 +68,7 @@ async def update_session_title(db: AsyncSession, session_id: str, title: str) ->
     session = await db.get(ChatSession, session_id)
     if session:
         session.title = title
-        session.updated_at = datetime.now(timezone.utc)
+        session.updated_at = datetime.now(timezone.utc).replace(tzinfo=None)
         await db.commit()
 
 
@@ -76,7 +76,7 @@ async def touch_session(db: AsyncSession, session_id: str) -> None:
     """Update updated_at timestamp on a session."""
     session = await db.get(ChatSession, session_id)
     if session:
-        session.updated_at = datetime.now(timezone.utc)
+        session.updated_at = datetime.now(timezone.utc).replace(tzinfo=None)
         await db.commit()
 
 

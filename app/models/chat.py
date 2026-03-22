@@ -13,7 +13,7 @@ from app.utils.database import Base
 
 
 def _now():
-    return datetime.now(timezone.utc)
+    return datetime.now(timezone.utc).replace(tzinfo=None)
 
 
 class ChatSession(Base):
